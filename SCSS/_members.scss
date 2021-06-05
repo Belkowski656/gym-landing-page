@@ -1,0 +1,70 @@
+.members {
+    background-image: url(../src/img3.jpg);
+    background-size: cover;
+
+    &__container {
+        @media (min-width:1024px) {
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+
+    &__bg {
+        background-color: rgba(222, 222, 222, 0.8);
+    }
+
+    &__wraper {
+        @media (min-width:1024px) {
+            width: 40%;
+        }
+    }
+
+    &__sub-title {
+        @include sub-title($black);
+        padding-top: 30px;
+    }
+
+    &__title {
+        @include title($orange);
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    &__hr {
+        width: 30%;
+        height: 5px;
+        background-color: $orange;
+        border: none;
+    }
+
+    &__h5 {
+        font-size: 20px;
+        padding-top: 20px;
+        padding-bottom: 15px;
+        text-transform: uppercase;
+    }
+
+    &__text {
+        font-weight: bold;
+        line-height: 180%;
+        padding-bottom: 20px;
+    }
+
+    &__img-wrap {
+        text-align: center;
+        padding-bottom: 80px;
+
+        @media (min-width:1024px) {
+            width: 40%;
+        }
+    }
+
+    &__img {
+        width: 80%;
+        max-width: 300px;
+
+        @media (min-width:1024px) {
+            transform: translateY(-30%);
+        }
+    }
+}
