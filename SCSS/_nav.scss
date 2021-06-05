@@ -1,0 +1,126 @@
+body {
+    background-color: black;
+}
+
+.nav {
+    background: rgba(255, 255, 255, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    color: white;
+    width: 100%;
+    height: 10vh;
+    line-height: 10vh;
+
+    @media (orientation:landscape) {
+        height: 15vh;
+        line-height: 15vh;
+    }
+
+    @media (min-width:768px) {
+        height: 8vh;
+        line-height: 8vh;
+    }
+
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 100%;
+    }
+
+    &__text {
+        font-size: 20px;
+        letter-spacing: 2px;
+    }
+
+    &__text--big {
+        font-size: 24px;
+        text-transform: uppercase;
+        padding-left: 3px;
+    }
+
+    &__hamburger {
+        font-size: 32px;
+        position: relative;
+        width: 32px;
+        height: 32px;
+
+        .nav__icon {
+            display: block;
+        }
+
+        .nav__icon--close {
+            display: none;
+        }
+
+        @media (min-width:768px) {
+            display: none;
+        }
+    }
+
+    &__hamburger--active {
+
+        .nav__icon {
+            display: none;
+        }
+
+        .nav__icon--close {
+            display: block;
+        }
+    }
+
+    &__list {
+        position: fixed;
+        top: 10vh;
+        left: 0;
+        width: 100%;
+        list-style: none;
+        text-align: center;
+        background: rgba(255, 255, 255, 0.1);
+        transition: .3s linear;
+        z-index: 1;
+
+        @media (orientation:landscape) {
+            top: 15vh;
+        }
+
+        @media (min-width:768px) {
+            position: static;
+            width: auto;
+            text-align: left;
+            transition: none;
+            z-index: auto;
+            display: flex;
+            line-height: 10vh;
+            background-color: transparent;
+        }
+    }
+
+    &__link {
+        display: block;
+        text-decoration: none;
+        color: white;
+        font-size: 18px;
+        padding: 10px;
+        text-transform: uppercase;
+        -webkit-tap-highlight-color: transparent;
+
+        &:hover {
+            color: $orange;
+        }
+
+        @media (min-width:768px) {
+            padding: 0 20px;
+            font-size: 16px;
+        }
+    }
+
+    &__list--active {
+        transform: translateY(-120%);
+
+        @media (min-width:768px) {
+            transform: translateY(0);
+        }
+    }
+}

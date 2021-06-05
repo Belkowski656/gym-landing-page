@@ -1,0 +1,36 @@
+$orange: #ff8013;
+$black: #101011;
+$gray: #343a40;
+
+$font-size-big: 40px;
+$font-size-medium: 34px;
+$font-size-subtitle: 24px;
+
+@mixin button-primary {
+    font-family: 'Lato', sans-serif;
+    padding: 10px 20px;
+    font-size: 20px;
+    color: white;
+    text-transform: uppercase;
+    background-color: transparent;
+    border: 1px solid #4e2b0d;
+
+    &:hover {
+        background-color: #dc3545;
+        border-color: #dc3545;
+    }
+}
+
+@mixin title($color) {
+    color: $color;
+    font-family: 'Lato', sans-serif;
+    font-size: $font-size-big;
+    text-transform: uppercase;
+}
+
+@mixin sub-title($color) {
+    color: $color;
+    font-family: 'Lato', sans-serif;
+    font-size: $font-size-medium;
+    text-transform: uppercase;
+}
