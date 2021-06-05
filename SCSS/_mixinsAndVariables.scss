@@ -14,6 +14,8 @@ $font-size-subtitle: 24px;
     text-transform: uppercase;
     background-color: transparent;
     border: 1px solid #4e2b0d;
+    cursor: pointer;
+    transition: .3s linear;
 
     &:hover {
         background-color: #dc3545;
