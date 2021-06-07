@@ -22,6 +22,10 @@
     &__sub-title {
         @include sub-title($black);
         padding-top: 30px;
+
+        @media (min-width:1024px) {
+            padding-top: 40px;
+        }
     }
 
     &__title {
@@ -48,6 +52,10 @@
         font-weight: bold;
         line-height: 180%;
         padding-bottom: 20px;
+
+        @media (min-width:1024px) {
+            padding-bottom: 50px;
+        }
     }
 
     &__img-wrap {
