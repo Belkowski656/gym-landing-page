@@ -1,0 +1,101 @@
+.advantages {
+    color: $black;
+    background-color: #464646;
+    padding-top: 20px;
+    transform: translateY(-30px);
+
+    &__container {
+        @media (min-width:823px) {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            // align-items: center;
+        }
+    }
+
+    &__photo {
+        height: 600px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin: 20px 0;
+
+        @media (min-width:823px) {
+            width: 30%;
+            height: 380px;
+        }
+    }
+
+
+    &__photo:nth-child(2) {
+        background-image: url(../src/img9.jpg);
+
+        @media (orientation:landscape) {
+            background-position: center;
+        }
+
+        @media (min-width:823px) {
+            order: 2;
+        }
+    }
+
+    &__photo:nth-child(3) {
+        background-image: url(../src/img10.jpg);
+
+        @media (min-width:823px) {
+            order: 4;
+            transform: translateY(-114px);
+        }
+    }
+
+    &__photo:nth-child(6) {
+        background-image: url(../src/img11.jpg);
+
+        @media (min-width:823px) {
+            order: 6;
+            transform: translateY(-114px);
+        }
+    }
+
+    &__description {
+        background-color: $orange;
+        padding: 20px;
+        margin: 20px 0;
+
+        @media (min-width:823px) {
+            width: 30%;
+            height: 266px;
+        }
+    }
+
+    &__description:nth-child(1) {
+
+        @media (min-width:823px) {
+            order: 1;
+        }
+    }
+
+    &__description:nth-child(4) {
+        @media (min-width:823px) {
+            order: 5;
+        }
+    }
+
+    &__description:nth-child(5) {
+        @media (min-width:823px) {
+            order: 3;
+        }
+    }
+
+    &__title {
+        font-size: $font-size-subtitle;
+        color: white;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+        font-weight: normal;
+    }
+
+    &__text {
+        font-weight: bold;
+        line-height: 170%;
+    }
+}
