@@ -1,0 +1,135 @@
+.trainers {
+    background-color: #464646;
+    padding-top: 30px;
+    color: $black;
+    text-align: center;
+    transform: translateY(-20px);
+
+    &__container {
+        background-color: black;
+        padding-top: 40px;
+        text-align: center;
+        position: relative;
+
+        &::before,
+        &::after {
+            content: "";
+            width: 100%;
+            height: 10px;
+            background-color: $orange;
+            display: block;
+        }
+
+        &::before {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    }
+
+    &__content-wrap {
+        @media (min-width:823px) {
+            display: flex;
+            justify-content: space-around;
+        }
+    }
+
+    &__title {
+        font-size: $font-size-medium;
+        color: white;
+        text-align: center;
+        text-transform: uppercase;
+        font-weight: normal;
+        width: 300px;
+        margin: 0 auto 30px;
+        position: relative;
+
+        &::after {
+            content: "";
+            position: absolute;
+            color: $orange;
+            background-image: url(../src/arrow--white.png);
+            width: 20px;
+            height: 20px;
+            bottom: -15%;
+            right: 5%;
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            color: white;
+            background-image: url(../src/arrow--white.png);
+            width: 20px;
+            height: 20px;
+            transform: rotate(180deg);
+            top: -15%;
+            left: 5%;
+        }
+
+    }
+
+    &__trainer {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+
+        @media (min-width:823px) {
+            width: 40%;
+        }
+    }
+
+    &__img {
+        width: 250px;
+        height: 250px;
+        background-size: cover;
+        background-position: center;
+        border-radius: 50%;
+    }
+
+    &__img {
+        background-image: url(../src/img8.jpg);
+    }
+
+    &__img--second {
+        background-image: url(../src/img7.jpg);
+    }
+
+    &__description {
+        background-color: #ccc;
+        width: 60%;
+        padding: 30px 15px;
+        border-radius: 15px;
+        margin-top: 30px;
+        position: relative;
+        z-index: 2;
+        margin-bottom: 30px;
+
+        @media (min-width:823px) {
+            width: 100%;
+        }
+
+        &::before {
+            content: "";
+            width: 30px;
+            height: 30px;
+            background-color: #ccc;
+            position: absolute;
+            top: 0;
+            left: 50%;
+            z-index: 1;
+            transform: translate(-50%, -50%) rotate(45deg);
+        }
+    }
+
+    &__name {
+        @include sub-title(#464646);
+        font-weight: normal;
+        margin-bottom: 15px;
+    }
+
+    &__text {
+        line-height: 170%;
+    }
+}
