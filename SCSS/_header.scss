@@ -6,12 +6,12 @@
     background-repeat: no-repeat;
     position: relative;
 
-    @media (min-width:1024px) {
-        height: 80vh;
+    @media (min-width:823px) {
+        height: 70vh;
     }
 
-    @media (min-width:1100px) {
-        height: 65vh;
+    @media (min-width:1200px) {
+        height: 63vh;
     }
 
     &__container {
@@ -21,7 +21,7 @@
         transform: translate(-50%, -50%);
         max-width: 324px;
 
-        @media (min-width:1024px) {
+        @media (min-width:823px) {
             top: 60%;
             left: 50%;
             transform: translate(-50%, -50%);
@@ -32,6 +32,18 @@
 
     &__title-box {
         text-align: center;
+        max-width: 324px;
+
+        @media (min-width:823px) {
+            text-align: left;
+        }
+    }
+
+    &__title {
+        @include title(white);
+        letter-spacing: 2px;
+        max-width: 324px;
+        position: relative;
 
         &::after {
             content: "";
@@ -40,12 +52,12 @@
             background-image: url(../src/arrow.png);
             width: 30px;
             height: 30px;
-            top: -25%;
-            left: 0%;
+            top: -35%;
+            left: 0;
 
-            @media (min-width:1024px) {
-                top: -15%;
-                left: -3%;
+            @media (min-width:823px) {
+                top: -30%;
+                left: -8%;
             }
         }
 
@@ -56,24 +68,15 @@
             background-image: url(../src/arrow.png);
             width: 30px;
             height: 30px;
-            bottom: 25%;
-            right: 0%;
+            bottom: -35%;
+            right: 0;
             transform: rotate(180deg);
 
-            @media (min-width:1024px) {
-                top: 30%;
-                left: 31%;
+            @media (min-width:823px) {
+                bottom: -30%;
+                right: 5%;
             }
         }
-
-        @media (min-width:1024px) {
-            text-align: left;
-        }
-    }
-
-    &__title {
-        @include title(white);
-        letter-spacing: 2px;
     }
 
     &__title--big {
@@ -84,7 +87,7 @@
         transform: translateY(200%);
         text-align: center;
 
-        @media (min-width:1024px) {
+        @media (min-width:823px) {
             transform: translateY(120%);
             text-align: left;
         }
